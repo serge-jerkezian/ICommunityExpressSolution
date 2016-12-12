@@ -1,0 +1,74 @@
+<h1>Movies</h1>
+
+
+
+<button  class="btn btn-default" (click)="toggleShowMovie()" >
+    +
+</button>
+
+<div *ngIf="newMovie != null">
+  <div class="form-group">
+    <label>
+        Id
+        <input type="text" class="form-control" [(ngModel)]="newMovie.id" >
+    </label>    
+  </div>
+<div class="form-group">
+    <label>
+        Name
+        <input type="text" class="form-control" [(ngModel)]="newMovie.name" >
+    </label>    
+  </div>
+
+  <button class="btn btn-default" (click)="addMovie()">
+      Save
+  </button>
+  <br />
+  <br />
+</div>
+
+<table class="table table-striped table-hover">
+    <tr *ngFor="let movie of movies" (click)="setCurrentMovie(movie)">
+        <td>
+            {{movie.id}}
+        </td>
+        <td>
+            {{movie.name}}
+        </td>
+    </tr>
+</table>
+
+
+<br />
+<br />
+
+<div *ngIf="selectedMovie != null">
+    <div class="row">
+        <div class="col-md-2">
+          Id  
+        </div>
+        <div class="col-md-10">
+            {{selectedMovie.id}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+          Name  
+        </div>
+        <div class="col-md-10">
+            {{selectedMovie.name}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+          Year  
+        </div>
+        <div class="col-md-10">
+            {{selectedMovie.year | ifEmpty}}
+        </div>
+    </div>
+    
+</div>
+
+
+
