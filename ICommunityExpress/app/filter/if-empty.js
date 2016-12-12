@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 /*
  * Raise the value exponentially
  * Takes an exponent argument that defaults to 1.
@@ -27,11 +27,11 @@ var IfEmptyPipe = (function () {
         }
         return value;
     };
-    IfEmptyPipe = __decorate([
-        core_1.Pipe({ name: 'ifEmpty' }), 
-        __metadata('design:paramtypes', [])
-    ], IfEmptyPipe);
     return IfEmptyPipe;
 }());
+IfEmptyPipe = __decorate([
+    core_1.Pipe({ name: 'ifEmpty' }),
+    __metadata("design:paramtypes", [])
+], IfEmptyPipe);
 exports.IfEmptyPipe = IfEmptyPipe;
 //# sourceMappingURL=if-empty.js.map

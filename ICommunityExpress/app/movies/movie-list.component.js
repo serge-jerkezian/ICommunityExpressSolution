@@ -8,9 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var movie_1 = require('../model/movie');
-var router_1 = require('@angular/router');
+var core_1 = require("@angular/core");
+var movie_1 = require("../model/movie");
+var router_1 = require("@angular/router");
 var MovieListComponent = (function () {
     function MovieListComponent(router) {
         this.router = router;
@@ -47,14 +47,14 @@ var MovieListComponent = (function () {
             }
         }
     };
-    MovieListComponent = __decorate([
-        core_1.Component({
-            selector: 'movies',
-            templateUrl: 'app/movies/movie-list.html'
-        }), 
-        __metadata('design:paramtypes', [router_1.Router])
-    ], MovieListComponent);
     return MovieListComponent;
 }());
+MovieListComponent = __decorate([
+    core_1.Component({
+        selector: 'movies',
+        templateUrl: 'app/movies/movie-list.html'
+    }),
+    __metadata("design:paramtypes", [router_1.Router])
+], MovieListComponent);
 exports.MovieListComponent = MovieListComponent;
 //# sourceMappingURL=movie-list.component.js.map

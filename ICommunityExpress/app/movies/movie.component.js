@@ -8,10 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var movie_1 = require('../model/movie');
-var router_1 = require('@angular/router');
-require('rxjs/add/operator/switchMap');
+var core_1 = require("@angular/core");
+var movie_1 = require("../model/movie");
+var router_1 = require("@angular/router");
+require("rxjs/add/operator/switchMap");
 var MovieComponent = (function () {
     function MovieComponent(route, router) {
         this.route = route;
@@ -41,14 +41,14 @@ var MovieComponent = (function () {
         this.movie = this.movies[0];
         console.info(this.movie.id);
     };
-    MovieComponent = __decorate([
-        core_1.Component({
-            selector: 'moviesAdd',
-            templateUrl: 'app/movies/movie.html'
-        }), 
-        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router])
-    ], MovieComponent);
     return MovieComponent;
 }());
+MovieComponent = __decorate([
+    core_1.Component({
+        selector: 'moviesAdd',
+        templateUrl: 'app/movies/movie.html'
+    }),
+    __metadata("design:paramtypes", [router_1.ActivatedRoute, router_1.Router])
+], MovieComponent);
 exports.MovieComponent = MovieComponent;
 //# sourceMappingURL=movie.component.js.map

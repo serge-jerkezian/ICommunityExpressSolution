@@ -1,0 +1,20 @@
+.table-hover tr 
+{
+    cursor: pointer;
+}
+
+.border
+{
+    border:solid red 1px;
+}
+
+body
+{
+    background-color:#eee;
+}
+
+.clear
+{
+    clear:both;
+}
+

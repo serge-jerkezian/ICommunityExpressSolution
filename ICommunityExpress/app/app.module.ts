@@ -7,6 +7,8 @@ import { AppComponent }        from './root/app.component';
 import { HomeComponent } from './home/home.component';
 import { MovieListComponent } from './movies/movie-list.component';
 import { MovieComponent } from './movies/movie.component';
+import { HeaderComponent } from './header/header.component';
+
 import { IfEmptyPipe} from './filter/if-empty'
 
 
@@ -24,6 +26,7 @@ import { IfEmptyPipe} from './filter/if-empty'
     HomeComponent,
     MovieListComponent,
     MovieComponent,
+    HeaderComponent,
     IfEmptyPipe
     
   ],
