@@ -3,11 +3,17 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { AppRoutingModule }     from './app-routing.module';
 
-import { AppComponent }        from './root/app.component';
-import { HomeComponent } from './home/home.component';
-import { MovieListComponent } from './movies/movie-list.component';
-import { MovieComponent } from './movies/movie.component';
-import { HeaderComponent } from './header/header.component';
+import { AppComponent }        from './components/pages/root/app.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { HeaderComponent } from './components/shared/header/header.component';
+
+import { ProductWindowComponent } from './components/shared/product/window/product-window.component';
+
+import { ProductCategoryWindowComponent } from './components/shared/product/window/product-category-window.component';
+
+
+
+
 
 import { IfEmptyPipe} from './filter/if-empty'
 
@@ -24,9 +30,9 @@ import { IfEmptyPipe} from './filter/if-empty'
   declarations: [
     AppComponent,    
     HomeComponent,
-    MovieListComponent,
-    MovieComponent,
     HeaderComponent,
+    ProductWindowComponent,
+    ProductCategoryWindowComponent,
     IfEmptyPipe
     
   ],

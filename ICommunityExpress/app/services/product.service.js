@@ -9,23 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var home_component_1 = require("./components/pages/home/home.component");
-var routes = [
-    //   { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: '', component: home_component_1.HomeComponent }
-];
-var AppRoutingModule = (function () {
-    function AppRoutingModule() {
+var mock_product_1 = require("../services/mock-product");
+var ProductService = (function () {
+    function ProductService() {
     }
-    return AppRoutingModule;
+    ProductService.prototype.getProductWindows = function () {
+        return Promise.resolve(mock_product_1.PRODUCT_WINDOWS);
+    };
+    ProductService.prototype.getProductCategoryWindows = function () {
+        return Promise.resolve(mock_product_1.PRODUCT_CATEGORY_WINDOWS);
+    };
+    return ProductService;
 }());
-AppRoutingModule = __decorate([
-    core_1.NgModule({
-        imports: [router_1.RouterModule.forRoot(routes)],
-        exports: [router_1.RouterModule]
-    }),
+ProductService = __decorate([
+    core_1.Injectable(),
     __metadata("design:paramtypes", [])
-], AppRoutingModule);
-exports.AppRoutingModule = AppRoutingModule;
-//# sourceMappingURL=app-routing.module.js.map
+], ProductService);
+exports.ProductService = ProductService;
+//# sourceMappingURL=product.service.js.map

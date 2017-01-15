@@ -12,11 +12,11 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var app_routing_module_1 = require("./app-routing.module");
-var app_component_1 = require("./root/app.component");
-var home_component_1 = require("./home/home.component");
-var movie_list_component_1 = require("./movies/movie-list.component");
-var movie_component_1 = require("./movies/movie.component");
-var header_component_1 = require("./header/header.component");
+var app_component_1 = require("./components/pages/root/app.component");
+var home_component_1 = require("./components/pages/home/home.component");
+var header_component_1 = require("./components/shared/header/header.component");
+var product_window_component_1 = require("./components/shared/product/window/product-window.component");
+var product_category_window_component_1 = require("./components/shared/product/window/product-category-window.component");
 var if_empty_1 = require("./filter/if-empty");
 var AppModule = (function () {
     function AppModule() {
@@ -33,9 +33,9 @@ AppModule = __decorate([
         declarations: [
             app_component_1.AppComponent,
             home_component_1.HomeComponent,
-            movie_list_component_1.MovieListComponent,
-            movie_component_1.MovieComponent,
             header_component_1.HeaderComponent,
+            product_window_component_1.ProductWindowComponent,
+            product_category_window_component_1.ProductCategoryWindowComponent,
             if_empty_1.IfEmptyPipe
         ],
         //   providers: [

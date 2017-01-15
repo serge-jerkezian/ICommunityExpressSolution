@@ -9,23 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var home_component_1 = require("./components/pages/home/home.component");
-var routes = [
-    //   { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: '', component: home_component_1.HomeComponent }
-];
-var AppRoutingModule = (function () {
-    function AppRoutingModule() {
+var HeaderComponent = (function () {
+    function HeaderComponent() {
     }
-    return AppRoutingModule;
+    return HeaderComponent;
 }());
-AppRoutingModule = __decorate([
-    core_1.NgModule({
-        imports: [router_1.RouterModule.forRoot(routes)],
-        exports: [router_1.RouterModule]
+HeaderComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'ice-header',
+        templateUrl: 'header.html'
     }),
     __metadata("design:paramtypes", [])
-], AppRoutingModule);
-exports.AppRoutingModule = AppRoutingModule;
-//# sourceMappingURL=app-routing.module.js.map
+], HeaderComponent);
+exports.HeaderComponent = HeaderComponent;
+//# sourceMappingURL=header.component.js.map
