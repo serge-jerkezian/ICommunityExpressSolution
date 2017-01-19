@@ -10,25 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var product_service_1 = require("../../../services/product.service");
-var HomeComponent = (function () {
-    function HomeComponent(productService) {
+var ProductDetailComponent = (function () {
+    function ProductDetailComponent(productService) {
         this.productService = productService;
     }
-    HomeComponent.prototype.ngOnInit = function () {
+    ProductDetailComponent.prototype.ngOnInit = function () {
+        // this.productService.getProductWindows().then(products => this.productWindows = products);
+        // this.productService.getProductCategoryWindows().then(category => this.productCategoryWindow = category);
         var _this = this;
-        this.productService.getProductWindows().then(function (products) { return _this.productWindows = products; });
-        this.productService.getProductCategoryWindows().then(function (category) { return _this.productCategoryWindow = category; });
+        this.productService.getProductDetail(1).then(function (x) { return _this.product = x; });
     };
-    return HomeComponent;
+    return ProductDetailComponent;
 }());
-HomeComponent = __decorate([
+ProductDetailComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'home',
-        templateUrl: 'home.html',
+        selector: 'product-detail',
+        templateUrl: 'product-detail.html',
         providers: [product_service_1.ProductService]
     }),
     __metadata("design:paramtypes", [product_service_1.ProductService])
-], HomeComponent);
-exports.HomeComponent = HomeComponent;
-//# sourceMappingURL=home.component.js.map
+], ProductDetailComponent);
+exports.ProductDetailComponent = ProductDetailComponent;
+//# sourceMappingURL=product-detail.component.js.map

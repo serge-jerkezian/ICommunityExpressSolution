@@ -1,9 +1,9 @@
 
 
 
- <div class="col-md-12" style="background-color:white">
+ <div class="col-md-12" style="background-color:white" *ngIf="category">
           <h2>
-            {{category.name}
+            {{category.name}}
           </h2>
           <div class="row">
             <product-window *ngFor="let product of category.products" [product]="product">

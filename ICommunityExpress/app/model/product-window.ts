@@ -1,3 +1,5 @@
+import {Product} from './product'
+
 export class ProductWindow
 {
   id: number;
@@ -15,5 +17,14 @@ export class ProductWindow
         this.price = price;
         this.image = image;
     }
+
+    // getProduct() : Product
+    // {
+    //     let product = new Product();
+    //     product.id = this.id;
+    //     product.name = this.name;
+    //     product.price = this.price;
+    //     return product;
+    // }
 
 }

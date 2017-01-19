@@ -24,8 +24,7 @@ ProductWindowComponent = __decorate([
         moduleId: module.id,
         selector: 'product-window',
         templateUrl: 'product-window.html'
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], ProductWindowComponent);
 exports.ProductWindowComponent = ProductWindowComponent;
 //# sourceMappingURL=product-window.component.js.map

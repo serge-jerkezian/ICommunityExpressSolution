@@ -24,8 +24,6 @@ export class HomeComponent implements OnInit
   {
     this.productService.getProductWindows().then(products => this.productWindows = products);
     this.productService.getProductCategoryWindows().then(category => this.productCategoryWindow = category);
-
-    debugger
   }
 
 

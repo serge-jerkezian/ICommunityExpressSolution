@@ -1,5 +1,7 @@
+import { Product } from '../model/product';
 import { ProductWindow } from '../model/product-window';
 import { ProductCategoryWindow } from '../model/product-category-window';
+
 
 export const PRODUCT_WINDOWS: ProductWindow[] = [
     { id: 1, name: 'men bag 1', image: 'man-bag.jpg', price: 50 },
