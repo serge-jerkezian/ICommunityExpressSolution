@@ -8,23 +8,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var product_window_1 = require("../../../../model/product-window");
+var core_1 = require('@angular/core');
+var product_window_1 = require('../../../../model/product-window');
 var ProductWindowComponent = (function () {
     function ProductWindowComponent() {
     }
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', product_window_1.ProductWindow)
+    ], ProductWindowComponent.prototype, "product", void 0);
+    ProductWindowComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'product-window',
+            templateUrl: 'product-window.html'
+        }), 
+        __metadata('design:paramtypes', [])
+    ], ProductWindowComponent);
     return ProductWindowComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", product_window_1.ProductWindow)
-], ProductWindowComponent.prototype, "product", void 0);
-ProductWindowComponent = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: 'product-window',
-        templateUrl: 'product-window.html'
-    })
-], ProductWindowComponent);
 exports.ProductWindowComponent = ProductWindowComponent;
 //# sourceMappingURL=product-window.component.js.map

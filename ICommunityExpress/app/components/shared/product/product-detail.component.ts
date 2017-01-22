@@ -1,4 +1,4 @@
-import { Component, OnInit  } from '@angular/core';
+import { Component, OnInit ,Input } from '@angular/core';
 import {ProductService} from '../../../services/product.service'
 import {Product} from '../../../model/product';
 
@@ -14,7 +14,8 @@ import {Product} from '../../../model/product';
 export class ProductDetailComponent implements OnInit 
 { 
 
-product: Product;
+  @Input()
+  product: Product;
 
   constructor(private productService:ProductService ){ }
 
@@ -23,7 +24,7 @@ product: Product;
     // this.productService.getProductWindows().then(products => this.productWindows = products);
     // this.productService.getProductCategoryWindows().then(category => this.productCategoryWindow = category);
 
-    this.productService.getProductDetail(1).then(x=> this.product = x);
+    //this.productService.getProductDetail(1).then(x=> this.product = x);
   }
 
 }

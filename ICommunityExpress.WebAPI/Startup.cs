@@ -14,7 +14,7 @@ namespace ICommunityExpress.WebAPI
     {
         public Startup(IHostingEnvironment env)
         {
-            var builder = new ConfigurationBuilder()
+            var builder = new ConfigurationBuilder()            
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
@@ -29,6 +29,16 @@ namespace ICommunityExpress.WebAPI
         {
             // Add framework services.
             services.AddMvc();
+            
+              // Add service and create Policy with options 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials() );
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,7 +47,15 @@ namespace ICommunityExpress.WebAPI
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            app.UseMvc();
+            app.UseCors("CorsPolicy");
+
+            //app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute("default", "{controller}/{action}/{id?}",
+                            defaults: new { controller = "Values", action = "Get" });                
+            });
+
         }
     }
 }

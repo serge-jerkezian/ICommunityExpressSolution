@@ -4,9 +4,21 @@ import { ProductCategoryWindow } from '../model/product-category-window';
 import { Product } from '../model/product';
 import {PRODUCT_WINDOWS,PRODUCT_CATEGORY_WINDOWS} from '../services/mock-product'
 
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Rx';
+import { HttpModule } from '@angular/http';
+import {BaseService} from './base.service'
+
+
+
+
 @Injectable()
-export class ProductService 
+export class ProductService extends BaseService
 {
+  constructor(http : Http){
+    super(http);
+  }
+
   getProductWindows(): Promise<ProductWindow[]> 
   {
     return Promise.resolve(PRODUCT_WINDOWS);
@@ -24,6 +36,11 @@ export class ProductService
     var product = new Product();
 
     return products.then(x => product = x[0] );
+  }
+
+  getProductDetailWebAPI(id:number) : Observable<Product>
+  {
+      return this.get('http://localhost:5000/product/detail', {id:99});
   }
 
 }

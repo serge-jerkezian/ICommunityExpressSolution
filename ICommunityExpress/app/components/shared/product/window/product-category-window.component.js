@@ -8,23 +8,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var product_category_window_1 = require("../../../../model/product-category-window");
+var core_1 = require('@angular/core');
+var product_category_window_1 = require('../../../../model/product-category-window');
 var ProductCategoryWindowComponent = (function () {
     function ProductCategoryWindowComponent() {
     }
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', product_category_window_1.ProductCategoryWindow)
+    ], ProductCategoryWindowComponent.prototype, "category", void 0);
+    ProductCategoryWindowComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'product-category-window',
+            templateUrl: 'product-category-window.html'
+        }), 
+        __metadata('design:paramtypes', [])
+    ], ProductCategoryWindowComponent);
     return ProductCategoryWindowComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", product_category_window_1.ProductCategoryWindow)
-], ProductCategoryWindowComponent.prototype, "category", void 0);
-ProductCategoryWindowComponent = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: 'product-category-window',
-        templateUrl: 'product-category-window.html'
-    })
-], ProductCategoryWindowComponent);
 exports.ProductCategoryWindowComponent = ProductCategoryWindowComponent;
 //# sourceMappingURL=product-category-window.component.js.map

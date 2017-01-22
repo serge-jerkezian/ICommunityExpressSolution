@@ -11,29 +11,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var product_service_1 = require('../../../services/product.service');
 var product_1 = require('../../../model/product');
-var ProductDetailComponent = (function () {
-    function ProductDetailComponent(productService) {
+var TestComponent = (function () {
+    function TestComponent(productService) {
         this.productService = productService;
     }
-    ProductDetailComponent.prototype.ngOnInit = function () {
-        // this.productService.getProductWindows().then(products => this.productWindows = products);
-        // this.productService.getProductCategoryWindows().then(category => this.productCategoryWindow = category);
-        //this.productService.getProductDetail(1).then(x=> this.product = x);
+    TestComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var errorObject = new product_1.Product();
+        errorObject.id = 8;
+        errorObject.name = "vigor";
+        errorObject.price = 99;
+        this.productService.getProductDetailWebAPI(1).subscribe(function (x) { return _this.product = x; });
+        // this.productService.getProductDetailWebAPI(1).subscribe((data) =>  this.product = data,
+        // (err) => this.product = errorObject); 
     };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', product_1.Product)
-    ], ProductDetailComponent.prototype, "product", void 0);
-    ProductDetailComponent = __decorate([
+    TestComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'product-detail',
-            templateUrl: 'product-detail.html',
+            selector: 'test',
+            templateUrl: 'test.html',
             providers: [product_service_1.ProductService]
         }), 
         __metadata('design:paramtypes', [product_service_1.ProductService])
-    ], ProductDetailComponent);
-    return ProductDetailComponent;
+    ], TestComponent);
+    return TestComponent;
 }());
-exports.ProductDetailComponent = ProductDetailComponent;
-//# sourceMappingURL=product-detail.component.js.map
+exports.TestComponent = TestComponent;
+//# sourceMappingURL=test.component.js.map
