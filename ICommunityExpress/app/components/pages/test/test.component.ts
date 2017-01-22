@@ -28,7 +28,7 @@ export class TestComponent implements OnInit
     errorObject.price = 99;
 
 
-    this.productService.getProductDetailWebAPI(1).subscribe(x => this.product = x);
+    this.productService.getProductDetail(1).subscribe(x => this.product = x);
 
     // this.productService.getProductDetailWebAPI(1).subscribe((data) =>  this.product = data,
     // (err) => this.product = errorObject); 

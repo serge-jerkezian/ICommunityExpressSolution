@@ -17,7 +17,7 @@ var routes = [
     //   { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: '', component: home_component_1.HomeComponent },
     { path: 'test', component: test_component_1.TestComponent },
-    { path: 'product/detail', component: product_detail_component_1.ProductDetailComponent },
+    { path: 'product/detail/:id', component: product_detail_component_1.ProductDetailComponent },
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {

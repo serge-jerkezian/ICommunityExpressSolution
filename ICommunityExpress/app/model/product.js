@@ -8,4 +8,10 @@ var Product = (function () {
     return Product;
 }());
 exports.Product = Product;
+var ProductImage = (function () {
+    function ProductImage() {
+    }
+    return ProductImage;
+}());
+exports.ProductImage = ProductImage;
 //# sourceMappingURL=product.js.map

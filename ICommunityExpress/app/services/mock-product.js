@@ -18,4 +18,23 @@ exports.PRODUCT_CATEGORY_WINDOWS = {
         { id: 5, name: 'men bag 7', image: 'man-bag-small.jpg', price: 130 }
     ]
 };
+exports.PRODUCT_DETAIL = {
+    id: 1,
+    name: 'Product 1 awesome',
+    price: 90,
+    images: [
+        {
+            id: 1,
+            title: 'this is image 1',
+            rank: 1,
+            url: 'bag.png'
+        },
+        {
+            id: 2,
+            title: 'this is image 2',
+            rank: 2,
+            url: 'man-bag.jpg'
+        }
+    ]
+};
 //# sourceMappingURL=mock-product.js.map

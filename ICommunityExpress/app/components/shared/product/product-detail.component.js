@@ -11,14 +11,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var product_service_1 = require('../../../services/product.service');
 var product_1 = require('../../../model/product');
+var router_1 = require('@angular/router');
 var ProductDetailComponent = (function () {
-    function ProductDetailComponent(productService) {
+    function ProductDetailComponent(productService, router) {
         this.productService = productService;
+        this.router = router;
     }
     ProductDetailComponent.prototype.ngOnInit = function () {
         // this.productService.getProductWindows().then(products => this.productWindows = products);
         // this.productService.getProductCategoryWindows().then(category => this.productCategoryWindow = category);
+        var _this = this;
         //this.productService.getProductDetail(1).then(x=> this.product = x);
+        this.router.params.subscribe(function (params) {
+            _this.id = params["id"];
+            //this.productService.getProductDetailWebAPI(this.id).subscribe(x => this.product = x);
+            _this.productService.getProductDetail(_this.id).subscribe(function (x) { return _this.product = x; });
+        });
     };
     __decorate([
         core_1.Input(), 
@@ -31,7 +39,7 @@ var ProductDetailComponent = (function () {
             templateUrl: 'product-detail.html',
             providers: [product_service_1.ProductService]
         }), 
-        __metadata('design:paramtypes', [product_service_1.ProductService])
+        __metadata('design:paramtypes', [product_service_1.ProductService, router_1.ActivatedRoute])
     ], ProductDetailComponent);
     return ProductDetailComponent;
 }());

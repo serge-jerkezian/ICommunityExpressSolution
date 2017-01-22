@@ -2,7 +2,13 @@
 
 <h3> Product Detail </h3>
 
-Name: 
-<div *ngIf="product">
-{{product.name}}
+<div class="col-xs-6">
+    <img src="public/images/products/{{product.images[0].url}}" alt="image not found idiot" class="img-responsive center-block" />
 </div>
+
+<div class="col-xs-6">
+    <h1>{{product.name}}</h1>
+
+    <div>
+        {{product.price}}
+    </div>

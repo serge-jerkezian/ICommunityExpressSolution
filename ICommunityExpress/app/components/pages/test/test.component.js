@@ -21,7 +21,7 @@ var TestComponent = (function () {
         errorObject.id = 8;
         errorObject.name = "vigor";
         errorObject.price = 99;
-        this.productService.getProductDetailWebAPI(1).subscribe(function (x) { return _this.product = x; });
+        this.productService.getProductDetail(1).subscribe(function (x) { return _this.product = x; });
         // this.productService.getProductDetailWebAPI(1).subscribe((data) =>  this.product = data,
         // (err) => this.product = errorObject); 
     };

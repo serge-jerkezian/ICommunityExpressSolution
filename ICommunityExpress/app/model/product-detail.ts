@@ -1,9 +1,9 @@
-export class Product 
+export class ProductDetail
 {
     id: number;
     name: string;
     price: number;
-    images: ProductImage[];
+    //images: ProductImage[];
 
     constructor();
     constructor(id: number, name: string);
@@ -17,10 +17,10 @@ export class Product
 
 }
 
-export class ProductImage
-{
-    id : number;
-    title: string;
-    url: string;
-    rank : number;
-}
+// export class ProductImage
+// {
+//     id : number;
+//     title: string;
+//     url: string;
+//     rank : number;
+// }
