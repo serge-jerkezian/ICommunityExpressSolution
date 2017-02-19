@@ -1,7 +1,7 @@
 "use strict";
-var http_1 = require('@angular/http');
-var Rx_1 = require('rxjs/Rx');
-var http_2 = require('@angular/http');
+var http_1 = require("@angular/http");
+var Rx_1 = require("rxjs/Rx");
+var http_2 = require("@angular/http");
 var BaseService = (function () {
     function BaseService(http) {
         this.http = http;

@@ -1,4 +1,6 @@
+/// <reference path="../../_ref.ts" />
 "use strict";
+var moment = require("moment");
 exports.PRODUCT_WINDOWS = [
     { id: 1, name: 'men bag 1', image: 'man-bag.jpg', price: 50 },
     { id: 2, name: 'men bag 2', image: 'man-bag-small.jpg', price: 100 },
@@ -34,6 +36,75 @@ exports.PRODUCT_DETAIL = {
             title: 'this is image 2',
             rank: 2,
             url: 'man-bag.jpg'
+        }
+    ],
+    communityInfo: {
+        id: 1,
+        name: 'community name 1',
+        openedDate: moment().format("dddd"),
+        //moment().subtract('months', 1).unix()
+        rate: 9
+    },
+    communityContact: [
+        {
+            id: 1,
+            name: 'community name 1'
+        },
+        {
+            id: 2,
+            name: 'community name 2'
+        }
+    ],
+    itemSpecifics: [
+        {
+            key: 'Brand Name',
+            value: 'Nike'
+        },
+        {
+            key: 'Color',
+            value: 'Blue'
+        },
+        {
+            key: 'Condition',
+            value: 'New'
+        },
+        {
+            key: 'Gender',
+            value: 'Unisex'
+        },
+        {
+            key: 'Material',
+            value: 'PVC'
+        },
+        {
+            key: 'Version',
+            value: '1.0.1'
+        },
+        {
+            key: 'Country',
+            value: 'Japan'
+        },
+        {
+            key: 'Size',
+            value: '1km'
+        },
+        {
+            key: 'Height',
+            value: '177 cm'
+        }
+    ],
+    packagingDetails: [
+        {
+            key: 'unit type',
+            value: 'piece'
+        },
+        {
+            key: 'Package Size',
+            value: '20cm x 15cm x 10cm (7.87in x 5.91in x 3.94in)'
+        },
+        {
+            key: 'package weight',
+            value: '0.800kg (1.76lb.)'
         }
     ]
 };

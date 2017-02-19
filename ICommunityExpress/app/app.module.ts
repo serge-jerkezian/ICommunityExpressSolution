@@ -9,9 +9,11 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { TestComponent } from './components/pages/test/test.component';
   
 import { HeaderComponent } from './components/shared/header/header.component';
-import { ProductDetailComponent } from './components/shared/product/product-detail.component';
+import { ProductDetailComponent } from './components/pages/product-detail/product-detail.component';
 import { ProductWindowComponent } from './components/shared/product/window/product-window.component';
 import { ProductCategoryWindowComponent } from './components/shared/product/window/product-category-window.component';
+import { CommunityInfoVisit } from './components/shared/community/community-info-visit.component';
+import { CommunityContact } from './components/shared/community/community-contact.component';
 
 import { IfEmptyPipe} from './filter/if-empty'
 
@@ -31,6 +33,8 @@ import { IfEmptyPipe} from './filter/if-empty'
     ProductDetailComponent,
     ProductWindowComponent,
     ProductCategoryWindowComponent,
+    CommunityInfoVisit,
+    CommunityContact,
     IfEmptyPipe
     
   ],

@@ -8,9 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var product_service_1 = require('../../../services/product.service');
-var product_1 = require('../../../model/product');
+var core_1 = require("@angular/core");
+var product_service_1 = require("../../../services/product.service");
+var product_1 = require("../../../model/product");
 var TestComponent = (function () {
     function TestComponent(productService) {
         this.productService = productService;
@@ -25,16 +25,16 @@ var TestComponent = (function () {
         // this.productService.getProductDetailWebAPI(1).subscribe((data) =>  this.product = data,
         // (err) => this.product = errorObject); 
     };
-    TestComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'test',
-            templateUrl: 'test.html',
-            providers: [product_service_1.ProductService]
-        }), 
-        __metadata('design:paramtypes', [product_service_1.ProductService])
-    ], TestComponent);
     return TestComponent;
 }());
+TestComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'test',
+        templateUrl: 'test.html',
+        providers: [product_service_1.ProductService]
+    }),
+    __metadata("design:paramtypes", [product_service_1.ProductService])
+], TestComponent);
 exports.TestComponent = TestComponent;
 //# sourceMappingURL=test.component.js.map

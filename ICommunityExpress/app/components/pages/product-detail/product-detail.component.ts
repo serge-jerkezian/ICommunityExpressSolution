@@ -2,6 +2,8 @@ import { Component, OnInit ,Input } from '@angular/core';
 import {ProductService} from '../../../services/product.service'
 import {Product} from '../../../model/product';
 import { ActivatedRoute } from '@angular/router';
+import {slideIn} from '../../../animation/main-animation'
+
 
 
 
@@ -18,17 +20,20 @@ export class ProductDetailComponent implements OnInit
   @Input()
   product: Product;
   id:  number;
+  slideInState : string = "in";
+  slideOutState : string = "out";
 
   constructor(private productService:ProductService,private router:ActivatedRoute ){ }
 
   ngOnInit(): void 
   {
+
     // this.productService.getProductWindows().then(products => this.productWindows = products);
     // this.productService.getProductCategoryWindows().then(category => this.productCategoryWindow = category);
 
     //this.productService.getProductDetail(1).then(x=> this.product = x);
 
-        this.router.params.subscribe(params =>
+    this.router.params.subscribe(params =>
     {
       this.id = params["id"];
       //this.productService.getProductDetailWebAPI(this.id).subscribe(x => this.product = x);
@@ -36,5 +41,7 @@ export class ProductDetailComponent implements OnInit
       this.productService.getProductDetail(this.id).subscribe(x => this.product = x);
     });
   }
+
+
 
 }

@@ -13,15 +13,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var mock_product_1 = require('../services/mock-product');
-var http_1 = require('@angular/http');
-var Rx_1 = require('rxjs/Rx');
-var base_service_1 = require('./base.service');
+var core_1 = require("@angular/core");
+var mock_product_1 = require("../services/mock-product");
+var http_1 = require("@angular/http");
+var Rx_1 = require("rxjs/Rx");
+var base_service_1 = require("./base.service");
 var ProductService = (function (_super) {
     __extends(ProductService, _super);
     function ProductService(http) {
-        _super.call(this, http);
+        return _super.call(this, http) || this;
     }
     ProductService.prototype.getProductWindows = function () {
         return Promise.resolve(mock_product_1.PRODUCT_WINDOWS);
@@ -35,11 +35,11 @@ var ProductService = (function (_super) {
     ProductService.prototype.getProductDetailWebAPI = function (id) {
         return this.get('http://localhost:5000/product/detail', { id: id });
     };
-    ProductService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], ProductService);
     return ProductService;
 }(base_service_1.BaseService));
+ProductService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http])
+], ProductService);
 exports.ProductService = ProductService;
 //# sourceMappingURL=product.service.js.map

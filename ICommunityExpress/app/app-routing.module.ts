@@ -2,7 +2,7 @@ import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent }   from './components/pages/home/home.component';
 import { TestComponent }   from './components/pages/test/test.component';
-import { ProductDetailComponent }   from './components/shared/product/product-detail.component';
+import { ProductDetailComponent }   from './components/pages/product-detail/product-detail.component';
 
 
 const routes: Routes = [

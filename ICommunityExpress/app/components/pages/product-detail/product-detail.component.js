@@ -8,14 +8,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var product_service_1 = require('../../../services/product.service');
-var product_1 = require('../../../model/product');
-var router_1 = require('@angular/router');
+var core_1 = require("@angular/core");
+var product_service_1 = require("../../../services/product.service");
+var product_1 = require("../../../model/product");
+var router_1 = require("@angular/router");
 var ProductDetailComponent = (function () {
     function ProductDetailComponent(productService, router) {
         this.productService = productService;
         this.router = router;
+        this.slideInState = "in";
+        this.slideOutState = "out";
     }
     ProductDetailComponent.prototype.ngOnInit = function () {
         // this.productService.getProductWindows().then(products => this.productWindows = products);
@@ -28,20 +30,20 @@ var ProductDetailComponent = (function () {
             _this.productService.getProductDetail(_this.id).subscribe(function (x) { return _this.product = x; });
         });
     };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', product_1.Product)
-    ], ProductDetailComponent.prototype, "product", void 0);
-    ProductDetailComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'product-detail',
-            templateUrl: 'product-detail.html',
-            providers: [product_service_1.ProductService]
-        }), 
-        __metadata('design:paramtypes', [product_service_1.ProductService, router_1.ActivatedRoute])
-    ], ProductDetailComponent);
     return ProductDetailComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", product_1.Product)
+], ProductDetailComponent.prototype, "product", void 0);
+ProductDetailComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'product-detail',
+        templateUrl: 'product-detail.html',
+        providers: [product_service_1.ProductService]
+    }),
+    __metadata("design:paramtypes", [product_service_1.ProductService, router_1.ActivatedRoute])
+], ProductDetailComponent);
 exports.ProductDetailComponent = ProductDetailComponent;
 //# sourceMappingURL=product-detail.component.js.map

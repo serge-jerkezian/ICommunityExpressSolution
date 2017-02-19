@@ -1,3 +1,5 @@
+//import {} from './community-info'
+
 export class ProductDetail
 {
     id: number;

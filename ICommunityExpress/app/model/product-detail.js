@@ -1,3 +1,4 @@
+//import {} from './community-info'
 "use strict";
 var ProductDetail = (function () {
     function ProductDetail(id, name, price) {

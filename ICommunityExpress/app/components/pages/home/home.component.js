@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var product_service_1 = require('../../../services/product.service');
+var core_1 = require("@angular/core");
+var product_service_1 = require("../../../services/product.service");
 var HomeComponent = (function () {
     function HomeComponent(productService) {
         this.productService = productService;
@@ -19,16 +19,16 @@ var HomeComponent = (function () {
         this.productService.getProductWindows().then(function (products) { return _this.productWindows = products; });
         this.productService.getProductCategoryWindows().then(function (category) { return _this.productCategoryWindow = category; });
     };
-    HomeComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'home',
-            templateUrl: 'home.html',
-            providers: [product_service_1.ProductService]
-        }), 
-        __metadata('design:paramtypes', [product_service_1.ProductService])
-    ], HomeComponent);
     return HomeComponent;
 }());
+HomeComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'home',
+        templateUrl: 'home.html',
+        providers: [product_service_1.ProductService]
+    }),
+    __metadata("design:paramtypes", [product_service_1.ProductService])
+], HomeComponent);
 exports.HomeComponent = HomeComponent;
 //# sourceMappingURL=home.component.js.map
